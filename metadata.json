@@ -1,0 +1,8 @@
+{
+  "name": "LaunchPath",
+  "description": "SkillPath AI — AI-Powered Adaptive Skills Development, Career Roadmaps, and Company Placement Preparation Platform for Engineering Students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

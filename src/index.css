@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #07070B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #07070B;
+    color: #F8F8FC;
+    overflow-x: hidden;
+  }
+  
+  .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  code, pre, kbd, samp, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom glowing effects and orbital styling */
+@keyframes orbital-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03) translate(-48.5%, -48.5%);
+  }
+}
+
+@keyframes light-drift {
+  0%, 100% {
+    filter: blur(70px);
+    opacity: 0.45;
+  }
+  50% {
+    filter: blur(85px);
+    opacity: 0.65;
+  }
+}
+
+.animate-orbital {
+  animation: orbital-pulse 8s ease-in-out infinite;
+}
+
+.animate-light-drift {
+  animation: light-drift 10s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07070B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.45);
+}
